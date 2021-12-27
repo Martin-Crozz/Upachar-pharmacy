@@ -9,6 +9,12 @@
                                                             }
                                                         }
                                                         
+                                                        @media (min-width: 1200px) {
+                                                            .container.custom-container {
+                                                                max-width: 1250px !important;
+                                                            }
+                                                        }
+                                                        
                                                         @media (max-width: 1026px) {
                                                             .navbar.header-sticky {
                                                                 justify-content: start;

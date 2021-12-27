@@ -28,6 +28,9 @@
     <!-- Bootstrap range slider -->
     <link rel="stylesheet" href="frontend/assets/bootstrap-range-slider-js/css/bootstrap-slider.min.css">
     <!-- Bootstrap range slider Ends -->
+    <!-- Toastr -->
+    <link rel="stylesheet" href="frontend/assets/toastr/toastr.min.css">
+    <!-- Toastr Ends -->
     <link rel="stylesheet" href="frontend/assets/css/style.css">
     <link rel="stylesheet" href="frontend/assets/css/responsive.css">
     <!-- Custom Links Ends -->
@@ -1642,17 +1645,17 @@
     </section>
     <!-- Whole Body Wrapper Ends -->
     <!-- 1st Jquery Link Starts-->
-    <script src="frontend/assets/jquery-3.5.1/jquery-3.5.1.js "></script>
+    <script src="frontend/assets/jquery-3.5.1/jquery-3.5.1.js"></script>
     <!-- Jquery Link Ends-->
     <!-- 2nd Popper Js Starts -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <!-- Popper Js Ends -->
     <!-- 3rd Bootstrap Js Link Starts -->
-    <script src="frontend/assets/bootstrap-4.3.1/js/bootstrap.min.js "></script>
-    <script src="frontend/assets/bootstrap-4.3.1/js/bootstrap.min.js.map "></script>
+    <script src="frontend/assets/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <script src="frontend/assets/bootstrap-4.3.1/js/bootstrap.min.js.map"></script>
     <!-- Bootstrap Js Link Ends -->
     <!-- Slick Js -->
-    <script src="frontend/assets/slick/slick.min.js "></script>
+    <script src="frontend/assets/slick/slick.min.js"></script>
     <!-- Slick Js Ends-->
     <!-- Isotope Js -->
     <script src="frontend/assets/isotope-js/isotope.pkgd.min.js"></script>
@@ -1660,8 +1663,11 @@
     <!-- Bootstrap range slider js -->
     <script src="frontend/assets/bootstrap-range-slider-js/bootstrap-slider.min.js"></script>
     <!-- Bootstrap range slider js Ends-->
+    <!-- Toastr -->
+    <script src="frontend/assets/toastr/toastr.min.js"></script>
+    <!-- Toastr Ends -->
     <!-- Custom Js Starts -->
-    <script src="frontend/assets/js/main.js "></script>
+    <script src="frontend/assets/js/main.js"></script>
     <!-- Custom Js Ends -->
     <!-- Popup Search Modal -->
     <!-- Modal -->
@@ -1671,8 +1677,8 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="searchpopupmodallabel">Search your favourite item here !</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                          <span aria-hidden="true">&times;</span>
+                      </button>
                 </div>
                 <div class="modal-body">
                     <input type="text">
@@ -1726,10 +1732,11 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title m-auto" id="navcartlabel"> <span class="mr-2"><i class="fa fa-opencart" aria-hidden="true"></i></span> Items List</h5>
+                    <h5 class="modal-title m-auto" id="navcartlabel"> <span class="mr-2"><i class="fa fa-opencart"
+                                  aria-hidden="true"></i></span> Items List</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-                    </button>
+                          <span aria-hidden="true">×</span>
+                      </button>
                 </div>
                 <div class="modal-body">
                     <table class="w-100">
@@ -1851,7 +1858,7 @@
                     </div>
                     <div class="d-flex justify-content-around align-items-center w-100">
                         <button type="button" class="effect m-auto">View Cart</button>
-                        <button type="button" class="effect m-auto">Proceed Checkout</button>
+                        <button type="button" class="effect m-auto ">Proceed Checkout</button>
                     </div>
                 </div>
             </div>
@@ -1865,406 +1872,151 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="leftsidebarfilterlabel">Product Filter</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                              aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <div class="left-side-wrapper px-4 py-4">
-                        <!-- Content -->
-                        <div class="card-wrapper mb-2">
-                            <div class="card-group-item">
-                                <div class="card-head">
-                                    <div class="heading d-flex align-items-center text-center flex-wrap">
-                                        <div class="head">
-                                            <h5 class="text-uppercase pl-5 m-0">Categories</h5>
+                        <div class="row">
+                            <!-- Content -->
+                            <div class="col-12">
+                                <div class="card-wrapper mb-2">
+                                    <div class="card-group-item">
+                                        <div class="card-head">
+                                            <div class="heading d-flex align-items-center text-center flex-wrap">
+                                                <div class="head">
+                                                    <h5 class="text-capitalize">Range</h5>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <div class="filter-content2 mt-3">
+                                            <div class="card-body">
+                                                <div class="slider slider-horizontal" id="range-slider">
+                                                    <div class="tooltip tooltip-min bs-tooltip-top show">
+                                                        <div class="arrow"></div>
+                                                        <div class="tooltip-inner">0</div>
+                                                    </div>
+                                                    <div class="tooltip tooltip-max bs-tooltip-top show" style="left: 95.5%;">
+                                                        <div class="arrow"></div>
+                                                        <div class="tooltip-inner">10000</div>
+                                                    </div>
+                                                    <input type="range" class="slider d-block w-100" value="5" data-slider-min="1" data-slider-max="1000" data-slider-step="1" data-slider-value="5" data-slider-orientation="horizontal" data-slider-enabled="true" data-slider-selection="after" data-slider-tooltip="always"
+                                                        data-slider-range="true" />
+                                                </div>
+                                                <!-- card-body.// -->
+                                            </div>
+                                        </div>
+                                        <!-- card-group-item.// -->
                                     </div>
-                                </div>
-                                <div class="filter-content1">
-                                    <div class="card-body p-3">
-                                        <ul class="mb-0">
-                                            <li>
-                                                <div class="item">
-                                                    <a href="" class="category-item py-1 active">Cheese Category 1</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="item">
-                                                    <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="item">
-                                                    <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="collapse" id="expand1">
-                                            <ul>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="expand text-center">
-                                            <a data-toggle="collapse" href="#expand1" role="button" aria-expanded="false" aria-controls="expand1">View more</a>
-                                        </div>
-                                    </div>
-                                    <!-- card-body.// -->
                                 </div>
                             </div>
-                            <!-- card-group-item.// -->
-                        </div>
-                        <!-- Content -->
-                        <div class="card-wrapper mt-4 mb-2">
-                            <div class="card-group-item">
-                                <div class="card-head">
-                                    <div class="heading d-flex align-items-center text-center flex-wrap">
-                                        <div class="head">
-                                            <h5 class="text-uppercase pl-5 m-0">Product</h5>
+                            <!-- Content Ends -->
+                            <div class="col-12">
+                                <div class="card-wrapper mb-2">
+                                    <div class="card-group-item">
+                                        <div class="card-head">
+                                            <div class="heading d-flex align-items-center text-center flex-wrap">
+                                                <div class="head">
+                                                    <h5 class="text-capitalize">Brands</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="our_brand-2 pt-3">
+                                            <div class="our_brand_item">
+                                                <img src="https://montechbd.com/shopist/demo/public/uploads/1616788177-h-80-nike.png" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="our_brand_item">
+                                                <img src="https://montechbd.com/shopist/demo/public/uploads/1616788177-h-80-nike.png" class="img-fluid" alt="">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="filter-content2">
-                                    <div class="card-body">
-                                        <form>
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 1
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 2
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 3
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 1
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 2
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 3
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <div class="collapse" id="expand2">
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                                <input class="form-check-input" type="checkbox" value="">
-                                                                <span class="form-check-label">
-                                                                    Brand 3
-                                                                </span>
-                                                            </label>
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 3
-                                                </span>
-                                            </label>
-                                                <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 1
-                                                </span>
-                                            </label>
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 2
-                                                </span>
-                                            </label>
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 3
-                                                </span>
-                                            </label>
-                                                <!-- form-check.// -->
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                                <input class="form-check-input" type="checkbox" value="">
-                                                                <span class="form-check-label">
-                                                                    Brand 3
-                                                                </span>
-                                                            </label>
-                                            </div>
-                                            <div class="expand text-center">
-                                                <a data-toggle="collapse" href="#expand2" role="button" aria-expanded="false" aria-controls="expand2">View more</a>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!-- card-body.// -->
+                                    <!-- card-group-item.// -->
                                 </div>
                             </div>
-                            <!-- card-group-item.// -->
-                        </div>
-                        <!-- Content -->
-                        <div class="card-wrapper mb-2">
-                            <div class="card-group-item">
-                                <div class="card-head">
-                                    <div class="heading d-flex align-items-center text-center flex-wrap">
-                                        <div class="head">
-                                            <h5 class="text-uppercase pl-5 m-0">Categories</h5>
+                            <div class="col-12">
+                                <div class="card-wrapper mb-2">
+                                    <div class="card-group-item">
+                                        <div class="card-head">
+                                            <div class="heading d-flex align-items-center text-center flex-wrap">
+                                                <div class="head">
+                                                    <h5 class="text-capitalize">Choose Color</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="colors_block p-3">
+                                            <label class="color_single"><small class="round"></small>
+                                                  <span class=""> Red</span>
+                                                  <input type="checkbox" checked="checked">
+                                                  <span class="checkmark"></span>
+                                              </label>
+                                            <label class="color_single">
+                                                  <small class="round bg-warning"></small>
+                                                  <span> Yellow</span>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                              </label>
+                                            <label class="color_single">
+                                                  <small class="round bg-primary"></small>
+                                                  <span>Blue</span>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                              </label>
+                                            <label class="color_single">
+                                                  <small class="round bg-success"></small>
+                                                  <span> Green</span>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                              </label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="filter-content1">
-                                    <div class="card-body p-3">
-                                        <ul class="mb-0">
-                                            <li>
-                                                <div class="item">
-                                                    <a href="" class="category-item py-1 active">Cheese Category 1</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="item">
-                                                    <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="item">
-                                                    <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="collapse" id="expand1">
-                                            <ul>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="item">
-                                                        <a href="" class="category-item py-1">Cheese Category 1</a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="expand text-center">
-                                            <a data-toggle="collapse" href="#expand1" role="button" aria-expanded="false" aria-controls="expand1">View more</a>
-                                        </div>
-                                    </div>
-                                    <!-- card-body.// -->
+                                    <!-- card-group-item.// -->
                                 </div>
                             </div>
-                            <!-- card-group-item.// -->
-                        </div>
-                        <!-- Content -->
-                        <div class="card-wrapper mt-4 mb-2">
-                            <div class="card-group-item">
-                                <div class="card-head">
-                                    <div class="heading d-flex align-items-center text-center flex-wrap">
-                                        <div class="head">
-                                            <h5 class="text-uppercase pl-5 m-0">Product</h5>
+                            <div class="col-12">
+                                <div class="card-wrapper mb-2">
+                                    <div class="card-group-item">
+                                        <div class="card-head">
+                                            <div class="heading d-flex align-items-center text-center flex-wrap">
+                                                <div class="head">
+                                                    <h5 class="text-capitalize">Choose Size</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="colors_block p-3">
+                                            <label class="color_single" <span=""> Small
+                                                  <input type="checkbox" checked="checked">
+                                                  <span class="checkmark"></span>
+                                              </label>
+                                            <label class="color_single">
+                                                  <span> Medium</span>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                              </label>
+                                            <label class="color_single">
+                                                  <span>Large</span>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                              </label>
+                                            <label class="color_single">
+                                                  <span> XL</span>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                              </label>
+                                            <label class="color_single">
+                                                  <span> XXL</span>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                              </label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="filter-content2">
-                                    <div class="card-body">
-                                        <form>
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 1
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 2
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 3
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 1
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 2
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 3
-                                                </span>
-                                            </label>
-                                            <!-- form-check.// -->
-                                            <div class="collapse" id="expand2">
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                                <input class="form-check-input" type="checkbox" value="">
-                                                                <span class="form-check-label">
-                                                                    Brand 3
-                                                                </span>
-                                                            </label>
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 3
-                                                </span>
-                                            </label>
-                                                <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 1
-                                                </span>
-                                            </label>
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 2
-                                                </span>
-                                            </label>
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Brand 3
-                                                </span>
-                                            </label>
-                                                <!-- form-check.// -->
-                                                <!-- form-check.// -->
-                                                <label class="form-check d-flex align-items-center">
-                                                                <input class="form-check-input" type="checkbox" value="">
-                                                                <span class="form-check-label">
-                                                                    Brand 3
-                                                                </span>
-                                                            </label>
-                                            </div>
-                                            <div class="expand text-center">
-                                                <a data-toggle="collapse" href="#expand2" role="button" aria-expanded="false" aria-controls="expand2">View more</a>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!-- card-body.// -->
+                                    <!-- card-group-item.// -->
                                 </div>
                             </div>
-                            <!-- card-group-item.// -->
                         </div>
                     </div>
                 </div>
                 <!-- <div class="modal-footer">
-                </div> -->
+              </div> -->
             </div>
         </div>
     </div>
@@ -2282,28 +2034,35 @@
                             </a>
                         </div>
                     </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                              aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body d-flex justify-content-between h-100 px-4">
                     <ul class="navbar-nav w-100">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html"> <span class="nav-indication mr-2"><i class="fa fa-eercast" aria-hidden="true"></i></span> Home</a>
+                            <a class="nav-link active" href="index.html"> <span class="nav-indication mr-2"><i
+                                          class="fa fa-eercast" aria-hidden="true"></i></span> Home</a>
                         </li>
                         <li class="nav-item d-flex align-items-center">
                             <a class="nav-link add-on" data-toggle="modal" data-target="#nav-cart">
-                                <span class="nav-indication mr-2"><i class="fa fa-eercast" aria-hidden="true"></i></span>My Cart <span class="mx-2"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span> <sup class="cart-items text-white">2</sup>
+                                <span class="nav-indication mr-2"><i class="fa fa-eercast"
+                                          aria-hidden="true"></i></span>My Cart <span class="mx-2"><i
+                                          class="fa fa-shopping-bag" aria-hidden="true"></i></span> <sup class="cart-items text-white">2</sup>
                             </a>
                         </li>
                         <li class="nav-item d-flex align-items-center">
                             <a class="nav-link add-on" data-toggle="modal" data-target="#nav-cart">
-                                <span class="nav-indication mr-2"><i class="fa fa-eercast" aria-hidden="true"></i></span>Wishlist <span class="mx-2"><i class="fa fa-heart-o" aria-hidden="true"></i></span> <sup class="cart-items text-white">2</sup>
+                                <span class="nav-indication mr-2"><i class="fa fa-eercast"
+                                          aria-hidden="true"></i></span>Wishlist <span class="mx-2"><i
+                                          class="fa fa-heart-o" aria-hidden="true"></i></span> <sup class="cart-items text-white">2</sup>
                             </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="nav-indication mr-2"><i class="fa fa-eercast" aria-hidden="true"></i></span>Products<span class="ml-1">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
+                                <span class="nav-indication mr-2"><i class="fa fa-eercast"
+                                          aria-hidden="true"></i></span>Products<span class="ml-1">
+                                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                  </span>
                             </a>
                             <div class="dropdown-menu">
                                 <div class="container d-block">
@@ -2427,9 +2186,10 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="nav-indication mr-2"><i class="fa fa-eercast" aria-hidden="true"></i></span>Category<span class="ml-1">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
+                                <span class="nav-indication mr-2"><i class="fa fa-eercast"
+                                          aria-hidden="true"></i></span>Category<span class="ml-1">
+                                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                  </span>
                             </a>
                             <div class="dropdown-menu">
                                 <div class="container d-block">
@@ -2553,9 +2313,10 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="nav-indication mr-2"><i class="fa fa-eercast" aria-hidden="true"></i></span> Recipes<span class="ml-1">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
+                                <span class="nav-indication mr-2"><i class="fa fa-eercast"
+                                          aria-hidden="true"></i></span> Recipes<span class="ml-1">
+                                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                  </span>
                             </a>
                             <div class="dropdown-menu">
                                 <div class="container d-block">
@@ -2678,13 +2439,16 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact-us.html"> <span class="nav-indication mr-2"><i class="fa fa-eercast" aria-hidden="true"></i></span> Contact Us</a>
+                            <a class="nav-link" href="contact-us.html"> <span class="nav-indication mr-2"><i
+                                          class="fa fa-eercast" aria-hidden="true"></i></span> Contact Us</a>
                         </li>
                     </ul>
                 </div>
                 <div class="modal-footer py-3">
-                    <a class="w-50 text-center" href="under-construction.html"> <span class="mr-2"><i class="fa fa-sign-in" aria-hidden="true"></i></span>Login</a>
-                    <a class="w-50 text-center" href="under-construction.html"> <span class="mr-2"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>Register</a>
+                    <a class="w-50 text-center" href="under-construction.html"> <span class="mr-2"><i
+                                  class="fa fa-sign-in" aria-hidden="true"></i></span>Login</a>
+                    <a class="w-50 text-center" href="under-construction.html"> <span class="mr-2"><i
+                                  class="fa fa-paper-plane" aria-hidden="true"></i></span>Register</a>
                 </div>
             </div>
         </div>
@@ -2695,43 +2459,50 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content h-100  border-0">
                 <!-- <div class="modal-header">
-                            <h5 class="modal-title" id="profilemobilenavtitle">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div> -->
+                          <h5 class="modal-title" id="profilemobilenavtitle">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div> -->
                 <div class="modal-body d-flex align-items-center justify-content-around h-100 w-100 p-0">
                     <div class="dashboard-list2 px-2 py-0">
                         <div class="d-user-avater text-center mb-4">
                             <img src="frontend/assets/images/product-images/1.jpg" class="img-fluid avater" alt="profile-image">
                             <h5>Adam Harshvardhan</h5>
-                            <a href=""> <span class="mr-1"><i class="fa fa-pencil" aria-hidden="true"></i></span> Upload Image</a>
+                            <a href=""> <span class="mr-1"><i class="fa fa-pencil" aria-hidden="true"></i></span> Upload Image
+                            </a>
                         </div>
                         <ul class="sidebar">
                             <li class="active mb-3 p-2">
-                                <a href="dashboard-profile.html"><span class="mr-2"><i class="fa fa-user" aria-hidden="true"></i></span>Profile</a>
+                                <a href="dashboard-profile.html"><span class="mr-2"><i class="fa fa-user"
+                                              aria-hidden="true"></i></span>Profile</a>
                             </li>
                             <li class="mb-3 p-2">
-                                <a href="dashboard-order-status.html"><span class="mr-2"><i class="fa fa-sort" aria-hidden="true"></i></span>Order Status</a>
+                                <a href="dashboard-order-status.html"><span class="mr-2"><i class="fa fa-sort"
+                                              aria-hidden="true"></i></span>Order Status</a>
                             </li>
                             <li class="mb-3 p-2">
-                                <a href="dashboard-cart.html"><span class="mr-2"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>My Cart</a>
+                                <a href="dashboard-cart.html"><span class="mr-2"><i class="fa fa-shopping-bag"
+                                              aria-hidden="true"></i></span>My Cart</a>
                             </li>
                             <li class="mb-3 p-2">
-                                <a href="dashboard-wishlist.html"><span class="mr-2"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>Wishlist</a>
+                                <a href="dashboard-wishlist.html"><span class="mr-2"><i class="fa fa-shopping-bag"
+                                              aria-hidden="true"></i></span>Wishlist</a>
                             </li>
                             <li class="mb-3 p-2">
-                                <a href="dashboard-change-password.html"><span class="mr-2"><i class="fa fa-lock" aria-hidden="true"></i></span>Change Password</a>
+                                <a href="dashboard-change-password.html"><span class="mr-2"><i class="fa fa-lock"
+                                              aria-hidden="true"></i></span>Change Password</a>
                             </li>
                             <li class="mb-3 p-2">
-                                <a href="index.html"><span class="mr-2"><i class="fa fa-sign-out" aria-hidden="true"></i></span>Logout</a>
+                                <a href="index.html"><span class="mr-2"><i class="fa fa-sign-out"
+                                              aria-hidden="true"></i></span>Logout</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div> -->
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div> -->
             </div>
         </div>
     </div>

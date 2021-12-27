@@ -39,7 +39,7 @@
 <body onload="myFunction()">
     <div id="loading"></div>
     <!-- Whole Body Wrapper Starts -->
-    <section id="product-listing-page">
+    <section id="checkout-page-wrapper">
         <section id="top-ads-wrapper">
             <div class="alert alert-dismissible fade show position-relative border-0 m-0 p-0" role="alert">
                 <img src="frontend/assets/images/product-images/5.jpg" alt="top-window-ads-banner" class="img-fluid">
@@ -494,349 +494,243 @@
                 <img src="frontend/assets/images/banner/1.png" alt="breadcrumb-image" class="img-fluid">
             </div>
             <div class="overlay position-absolute">
-                <div class="title p-4">Product Listing</div>
+                <div class="title p-4">Page Title</div>
             </div>
         </section>
         <!-- Breadcrumbs Ends -->
-        <!-- Product Listing -->
-        <section id="product-listing-wrapper" class="py-5">
+        <!-- Checkout -->
+        <section id="checkout-wrapper" class="py-3">
             <div class="container">
-                <div class="product-lists">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-12">
-                            <div class="left-side-wrapper px-4 py-4 d-lg-block d-none">
-                                <div class="row">
-                                    <!-- Content -->
-                                    <div class="col-12">
-                                        <div class="card-wrapper mb-2">
-                                            <div class="card-group-item">
-                                                <div class="card-head">
-                                                    <div class="heading d-flex align-items-center text-center flex-wrap">
-                                                        <div class="head">
-                                                            <h5 class="text-capitalize">Range</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="filter-content2 mt-3">
-                                                    <div class="card-body">
-                                                        <div class="slider" id="range-slider">
-                                                        </div>
-                                                    </div>
-                                                    <!-- card-body.// -->
-                                                </div>
-                                            </div>
-                                            <!-- card-group-item.// -->
-                                        </div>
+                <div class="row">
+                    <div id="accordion" class="w-100">
+                        <!-- First Collapse -->
+                        <div class="card">
+                            <div class="card-header p-0 bg-light" id="headingOne">
+                                <h5 class="mb-0">
+                                    <div class="w-100 p-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="mr-2"><i class="fa fa-ravelry" aria-hidden="true"></i></span> Order Summary
                                     </div>
-                                    <!-- Content Ends -->
-                                    <div class="col-12">
-                                        <div class="card-wrapper mb-2">
-                                            <div class="card-group-item">
-                                                <div class="card-head">
-                                                    <div class="heading d-flex align-items-center text-center flex-wrap">
-                                                        <div class="head">
-                                                            <h5 class="text-capitalize">Brands</h5>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <section id="cart-wrapper" class="">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="profile-side-detail-edit">
+                                                        <div class="dashboard-content d-flex align-items-center h-100">
+                                                            <div class="shopping-cart">
+                                                                <div class="shopping-cart-table">
+                                                                    <div class="table-responsive-lg">
+                                                                        <table class="table">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th class="cart-description item">Image</th>
+                                                                                    <th class="cart-product-name item">Product Name</th>
+                                                                                    <th class="cart-qty item">Quantity</th>
+                                                                                    <th class="cart-total last-item">Total</th>
+                                                                                    <th class="cart-romove item">Remove</th>
+
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <!-- /thead -->
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="cart-image">
+                                                                                        <a class="entry-thumbnail" href="detail.html">
+                                                                                            <img src="frontend/assets/images/product-images/7.jpg" class="img-fluid">
+                                                                                        </a>
+                                                                                    </td>
+                                                                                    <td class="cart-product-name-info">
+                                                                                        <h4 class="cart-product-description"><a href="detail.html">Yoga Mat</a></h4>
+                                                                                        <div class="row">
+                                                                                            <div class="col-4">
+                                                                                                <div class="rating rateit-small"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <!-- /.row -->
+                                                                                    </td>
+                                                                                    <td class="cart-product-quantity">
+                                                                                        <div class="quant-input">
+                                                                                            <input type="number" value="1">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="cart-product-grand-total"><span class="cart-grand-total-price">$300.00</span>
+                                                                                    </td>
+                                                                                    <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="cart-image">
+                                                                                        <a class="entry-thumbnail" href="detail.html">
+                                                                                            <img src="frontend/assets/images/product-images/8.jpg" class="img-fluid">
+                                                                                        </a>
+                                                                                    </td>
+                                                                                    <td class="cart-product-name-info">
+                                                                                        <h4 class="cart-product-description"><a href="detail.html">Yoga Mat</a></h4>
+                                                                                        <div class="row">
+                                                                                            <div class="col-4">
+                                                                                                <div class="rating rateit-small"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <!-- /.row -->
+                                                                                    </td>
+                                                                                    <td class="cart-product-quantity">
+                                                                                        <div class="quant-input">
+                                                                                            <input type="number" value="1">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="cart-product-grand-total"><span class="cart-grand-total-price">$300.00</span>
+                                                                                    </td>
+                                                                                    <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="cart-image">
+                                                                                        <a class="entry-thumbnail" href="detail.html">
+                                                                                            <img src="frontend/assets/images/product-images/9.jpg" class="img-fluid">
+                                                                                        </a>
+                                                                                    </td>
+                                                                                    <td class="cart-product-name-info">
+                                                                                        <h4 class="cart-product-description"><a href="detail.html">Yoga Mat</a></h4>
+                                                                                        <div class="row">
+                                                                                            <div class="col-4">
+                                                                                                <div class="rating rateit-small"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <!-- /.row -->
+                                                                                    </td>
+                                                                                    <td class="cart-product-quantity">
+                                                                                        <div class="quant-input">
+                                                                                            <input type="number" value="1">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="cart-product-grand-total"><span class="cart-grand-total-price">$300.00</span>
+                                                                                    </td>
+                                                                                    <td class="romove-item"><a href="#" title="cancel" class="icon"><i class="fa fa-trash-o"></i></a>
+                                                                                    </td>
+
+                                                                                </tr>
+                                                                            </tbody>
+                                                                            <!-- /tbody -->
+                                                                        </table>
+                                                                        <div class="d-flex justify-content-around align-items-center w-100 my-3 flex-wrap">
+                                                                            <!-- <form class="coupon-field d-flex flex-wrap align-items-center justify-content-center">
+                                                                                <input type="text" placeholder="Apply Coupon Code" class="mr-2">
+                                                                                <button type="button" class="effect mt-xl-0 mt-md-0 mt-2">Apply
+                                                                                    Coupon</button>
+                                                                            </form> -->
+                                                                            <div class="total-amount font-weight-bold mt-xl-0 mt-md-0 mt-2">
+                                                                                Total Amount : <span>$2000</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="our_brand pt-3">
-                                                    <div class="our_brand_item">
-                                                        <img src="https://montechbd.com/shopist/demo/public/uploads/1616788177-h-80-nike.png" class="img-fluid" alt="">
-                                                    </div>
-                                                    <div class="our_brand_item">
-                                                        <img src="https://montechbd.com/shopist/demo/public/uploads/1616788177-h-80-nike.png" class="img-fluid" alt="">
-                                                    </div>
-                                                </div>
+
                                             </div>
-                                            <!-- card-group-item.// -->
                                         </div>
-
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="card-wrapper mb-2">
-                                            <div class="card-group-item">
-                                                <div class="card-head">
-                                                    <div class="heading d-flex align-items-center text-center flex-wrap">
-                                                        <div class="head">
-                                                            <h5 class="text-capitalize">Choose Color</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="colors_block p-3">
-                                                    <label class="color_single"><small class="round"></small>
-                                                <span class=""> Red</span>
-                                                <input type="checkbox" checked="checked">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                                    <label class="color_single">
-                                                <small class="round bg-warning"></small>
-                                                <span> Yellow</span>
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                                    <label class="color_single">
-                                                <small class="round bg-primary"></small>
-                                                <span>Blue</span>
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                                    <label class="color_single">
-                                                <small class="round bg-success"></small>
-                                                <span> Green</span>
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                                </div>
-                                            </div>
-                                            <!-- card-group-item.// -->
-                                        </div>
-
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="card-wrapper mb-2">
-                                            <div class="card-group-item">
-                                                <div class="card-head">
-                                                    <div class="heading d-flex align-items-center text-center flex-wrap">
-                                                        <div class="head">
-                                                            <h5 class="text-capitalize">Choose Size</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="colors_block p-3">
-                                                    <label class="color_single" <span=""> Small
-                                                <input type="checkbox" checked="checked">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                                    <label class="color_single">
-                                                <span> Medium</span>
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                                    <label class="color_single">
-                                                <span>Large</span>
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                                    <label class="color_single">
-                                                <span> XL</span>
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                                    <label class="color_single">
-                                                <span> XXL</span>
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                              </label>
-                                                </div>
-                                            </div>
-                                            <!-- card-group-item.// -->
-                                        </div>
-
-                                    </div>
-
+                                    </section>
                                 </div>
                             </div>
-                            <!-- Mobile Filter  -->
-                            <!-- Button trigger modal -->
-                            <button type="button" class="effect d-xl-none d-lg-none d-md-block mb-4" data-toggle="modal" data-target="#leftsidebarfilter">
-                                            Product Filter
-                                             <span class="ml-2">
-                                                 <i class="fa fa-list" aria-hidden="true"></i>
-                                                </span>
-                                </button>
-                            <!-- Mobile Filter Ends -->
                         </div>
-                        <div class="col-xl-9 col-lg-9 col-12">
-                            <div class="row right-side-wrapper">
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
-                                    <div class="product-grid-item2">
-                                        <div class="product-grid-image2">
-                                            <a href="#"> <img src="https://demo2.madrasthemes.com/cartzilla/grocery/wp-content/uploads/sites/5/2020/03/6.jpg" alt="img" class="img-fluid pic-1"> </a>
-                                            <ul class="social">
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-bag"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-cart"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-exchange"></a>
-                                                </li>
-                                            </ul> <span class="product-discount-label">-20%</span> </div>
-                                        <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
-                                            <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
+                        <!-- First Collapse Ends -->
+                        <!-- Second Collapse  -->
+                        <div class="card">
+                            <div class="card-header p-0 bg-light" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <div class="collapsed p-3" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="mr-2"><i class="fa fa-ravelry" aria-hidden="true"></i></span> Shipping Information
                                     </div>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="" class="text_gray">First Name</label>
+                                                <input type="text" class="form-control w-100" placeholder="First name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="" class="text_gray">Last Name</label>
+                                                <input type="text" class="form-control w-100" placeholder="Last name">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="" class="text_gray mt-3">Address</label>
+                                                <input type="text" class="form-control w-100" placeholder="Nepal">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="" class="text_gray mt-3">Cite</label>
+                                                <input type="text" class="form-control w-100" placeholder="Nepal">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="" class="text_gray mt-3">Country</label>
+                                                <input type="text" class="form-control w-100" placeholder="Nepal">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="" class="text_gray mt-3">Postal Code</label>
+                                                <input type="text" class="form-control w-100" placeholder="5468">
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
-                                    <div class="product-grid-item2">
-                                        <div class="product-grid-image2">
-                                            <a href="#"> <img src="https://demo2.madrasthemes.com/cartzilla/grocery/wp-content/uploads/sites/5/2020/03/6.jpg" alt="img" class="img-fluid pic-1"> </a>
-                                            <ul class="social">
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-bag"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-cart"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-exchange"></a>
-                                                </li>
-                                            </ul> <span class="product-discount-label">-20%</span> </div>
-                                        <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
-                                            <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
-                                    <div class="product-grid-item2">
-                                        <div class="product-grid-image2">
-                                            <a href="#"> <img src="https://demo2.madrasthemes.com/cartzilla/grocery/wp-content/uploads/sites/5/2020/03/6.jpg" alt="img" class="img-fluid pic-1"> </a>
-                                            <ul class="social">
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-bag"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-cart"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-exchange"></a>
-                                                </li>
-                                            </ul> <span class="product-discount-label">-20%</span> </div>
-                                        <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
-                                            <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
-                                    <div class="product-grid-item2">
-                                        <div class="product-grid-image2">
-                                            <a href="#"> <img src="https://demo2.madrasthemes.com/cartzilla/grocery/wp-content/uploads/sites/5/2020/03/6.jpg" alt="img" class="img-fluid pic-1"> </a>
-                                            <ul class="social">
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-bag"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-cart"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-exchange"></a>
-                                                </li>
-                                            </ul> <span class="product-discount-label">-20%</span> </div>
-                                        <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
-                                            <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
-                                    <div class="product-grid-item2">
-                                        <div class="product-grid-image2">
-                                            <a href="#"> <img src="https://demo2.madrasthemes.com/cartzilla/grocery/wp-content/uploads/sites/5/2020/03/6.jpg" alt="img" class="img-fluid pic-1"> </a>
-                                            <ul class="social">
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-bag"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-cart"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-exchange"></a>
-                                                </li>
-                                            </ul> <span class="product-discount-label">-20%</span> </div>
-                                        <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
-                                            <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
-                                    <div class="product-grid-item2">
-                                        <div class="product-grid-image2">
-                                            <a href="#"> <img src="https://demo2.madrasthemes.com/cartzilla/grocery/wp-content/uploads/sites/5/2020/03/6.jpg" alt="img" class="img-fluid pic-1"> </a>
-                                            <ul class="social">
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-bag"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-cart"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-exchange"></a>
-                                                </li>
-                                            </ul> <span class="product-discount-label">-20%</span> </div>
-                                        <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
-                                            <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
-                                    <div class="product-grid-item2">
-                                        <div class="product-grid-image2">
-                                            <a href="#"> <img src="https://demo2.madrasthemes.com/cartzilla/grocery/wp-content/uploads/sites/5/2020/03/6.jpg" alt="img" class="img-fluid pic-1"> </a>
-                                            <ul class="social">
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-bag"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-cart"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-exchange"></a>
-                                                </li>
-                                            </ul> <span class="product-discount-label">-20%</span> </div>
-                                        <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
-                                            <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
-                                    <div class="product-grid-item2">
-                                        <div class="product-grid-image2">
-                                            <a href="#"> <img src="https://demo2.madrasthemes.com/cartzilla/grocery/wp-content/uploads/sites/5/2020/03/6.jpg" alt="img" class="img-fluid pic-1"> </a>
-                                            <ul class="social">
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-bag"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-cart"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-exchange"></a>
-                                                </li>
-                                            </ul> <span class="product-discount-label">-20%</span> </div>
-                                        <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
-                                            <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
-                                    <div class="product-grid-item2">
-                                        <div class="product-grid-image2">
-                                            <a href="#"> <img src="https://demo2.madrasthemes.com/cartzilla/grocery/wp-content/uploads/sites/5/2020/03/6.jpg" alt="img" class="img-fluid pic-1"> </a>
-                                            <ul class="social">
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-bag"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-shopping-cart"></a>
-                                                </li>
-                                                <li>
-                                                    <a href="" class="fa fa-exchange"></a>
-                                                </li>
-                                            </ul> <span class="product-discount-label">-20%</span> </div>
-                                        <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
-                                            <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
-                                    </div>
-                                </div>
-                                <button type="button" class="effect mx-auto mt-4">View More</button>
                             </div>
                         </div>
+                        <!-- Second Collapse End -->
+                        <!-- Third Collapse  -->
+                        <div class="card">
+                            <div class="card-header p-0 bg-light" id="headingThree">
+                                <h5 class="mb-0">
+                                    <div class="collapsed p-3" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="mr-2"><i class="fa fa-ravelry" aria-hidden="true"></i></span> Payment Option
+                                    </div>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                                                <label class="custom-control-label" for="customRadio1">Cash On Delivery</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                                <label class="custom-control-label" for="customRadio2" data-toggle="collapse" href="#cus-collapse1" role="button" aria-expanded="false" aria-controls="cus-collapse1">E-Sewa</label>
+                                            </div>
+                                            <!-- <div class="collapse mt-2" id="cus-collapse1">
+                                        <div class="card card-body p-0 border-0">
+                                            <form class="">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="E-Sewa Id">
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="password" class="form-control" placeholder="Password">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Collapse End -->
                     </div>
-                </div>
+                    <button class="effect">Checkout</button> </div>
             </div>
         </section>
-        <!-- Product Listing Ends -->
-        <!-- Footer -->
+        <!-- Checkout Ends -->
         <section id="footer-wrapper" class="text-white py-5">
             <div class="container">
                 <div class="row">

@@ -11,21 +11,22 @@ function myFunction() {
 };
 // Navigation Js Scroll Starts
 $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if (scroll > 50) {
-            $(".navigation-wrap").css("background", "white");
-            $(".nav-link").css("color", "#484d67");
-            $(".navigation-wrap").css("box-shadow", "rgb(0 0 0 / 20%) 0px 10px 10px -7px");
-            $(".navigation-wrap").css("padding", "10px 0px");
-            $(".navigation-wrap").css("border-bottom", "3px solid var(--main-color)");
-        } else {
-            $(".navigation-wrap").css("background", "white");
-            $(".nav-link").css("color", "#484d67");
-            $(".navigation-wrap").css("box-shadow", "none");
-            $(".navigation-wrap").css("padding", "10px 15px");
-            $(".navigation-wrap").css("border-bottom", "unset");
-        }
-    }) // Navigation Js Scroll Ends
+    var scroll = $(window).scrollTop();
+    if (scroll > 50) {
+        $(".navigation-wrap").css("background", "white");
+        $(".nav-link").css("color", "#484d67");
+        $(".navigation-wrap").css("box-shadow", "rgb(0 0 0 / 20%) 0px 10px 10px -7px");
+        $(".navigation-wrap").css("padding", "10px 0px");
+        $(".navigation-wrap").css("border-bottom", "3px solid var(--main-color)");
+    } else {
+        $(".navigation-wrap").css("background", "white");
+        $(".nav-link").css("color", "#484d67");
+        $(".navigation-wrap").css("box-shadow", "none");
+        $(".navigation-wrap").css("padding", "10px 15px");
+        $(".navigation-wrap").css("border-bottom", "unset");
+    }
+}); // Navigation Js Scroll Ends
+
 $(document).ready(function() {
     // product Gallery and Zoom
     // activation carousel plugin
@@ -310,5 +311,13 @@ $(document).ready(function() {
         }
         $(this).removeClass('image-size').addClass('imagesize-active');
     });
+
+    // Toastr
+    $('.toastr-click').click(function() {
+        toastr.success('Successfully Product added');
+        // $('.toastr-click').prop('disabled', true);
+        // delayToasts();
+    });
+
 });
 // Product Detail Image Size choose Js
