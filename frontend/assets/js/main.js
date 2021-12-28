@@ -314,6 +314,7 @@ $(document).ready(function() {
 
     // Toastr
     $('.toastr-click').click(function() {
+        console.log('hwllo');
         toastr.success('Successfully Product added');
         // $('.toastr-click').prop('disabled', true);
         // delayToasts();
@@ -321,3 +322,7 @@ $(document).ready(function() {
 
 });
 // Product Detail Image Size choose Js
+
+function successMsg() {
+    toastr.success('Successfully Product added');
+}

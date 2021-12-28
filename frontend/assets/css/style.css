@@ -1745,7 +1745,6 @@ a.btn {
 a.btn:hover {
     color: var(--blue);
     background: transparent;
-    border: 1px solid;
 }
 
 .our_brand {
