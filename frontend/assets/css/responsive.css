@@ -42,7 +42,7 @@
   }
   /* Testimonial eNDS */
   /* Leftsidebar Filter */
-  #leftsidebarfilter .modal-body {
+  #leftsidebarfilter .modal-content {
     height: 100vh;
     overflow-y: scroll;
   }
@@ -67,10 +67,10 @@
     padding: .9rem;
     border-radius: 5px;
   }
-  .vendor-profile-content {
+  #vendor-profile-wrapper .vendor-profile-content {
     transform: translateY(0px);
 }
-.profile-side-detail-edit {
+#vendor-profile-wrapper .profile-side-detail-edit {
   position: absolute;
   transform: translateY(-175px);
   /* margin: auto; */
@@ -125,7 +125,7 @@ margin: auto;
 /* Popup Cart Ends */
 }
 @media (max-width: 450px) {
-.profile-side-detail-edit {
+  #vendor-profile-wrapper .profile-side-detail-edit {
   position: relative;
   transform: unset;
   /* margin: auto; */
