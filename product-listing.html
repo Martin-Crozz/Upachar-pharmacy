@@ -54,20 +54,21 @@
                 <div class="top-header py-1">
                     <ul class="d-flex justify-content-end align-items-center m-0">
                         <li>
-                            <a class="nav-link text-white href=" login-register.html"> <span class=" mr-2"><i
-                                        class=" fa
-                                                                                                                                                                                                                                                                                                                        fa-sign-in"
-                                        aria-hidden=" true"></i></span>Login</a>
+                            <a class="nav-link text-white" href="login-register.html">
+                                <span class=" mr-2">
+                                    <i class=" fa fa-sign-in" aria-hidden="true"></i></span>Login</a>
                         </li>
                         <li>
-                            <a class=" nav-link text-white href=" login-register.html"> <span class="mr-2"><i class="fa fa-paper-plane"
+                            <a class="nav-link text-white" href="register-login.html">
+                                <span class="mr-2">
+                                    <i class="fa fa-paper-plane"
                                         aria-hidden="true"></i></span>Register</a>
                         </li>
                         <li>
-                            <a class="nav-link text-white href=" under-construction.html">Save more on App</a>
+                            <a class="nav-link text-white" href="">Save more on App</a>
                         </li>
                         <li>
-                            <a class=" nav-link text-white href=" under-construction.html">Track my Order</a>
+                            <a class="nav-link text-white" href="">Track my Order</a>
                         </li>
                     </ul>
                 </div>
@@ -79,8 +80,8 @@
             <nav class="navbar header-sticky justify-content-around">
                 <div class="image">
                     <a class="navbar-brand" href="index.html">
-                        <!-- <img src="frontend/assets/images/logo/logo.png" alt="navigation-logo" class="img-fluid"> -->
-                        <h3 class="m-0 font-weight-bold"><span>Upachar</span> Pharmacy</h3>
+                        <img src="frontend/assets/images/logo/3.png" alt="navigation-logo" class="img-fluid">
+                        <!-- <h3 class="m-0 font-weight-bold"><span>Upachar</span> Pharmacy</h3> -->
                     </a>
                 </div>
                 <div class="navbar-menus d-xl-block d-lg-block d-none" id="navbarmain">
@@ -513,6 +514,7 @@
             <div class="container">
                 <div class="product-lists">
                     <div class="row">
+                    
                         <div class="col-xl-3 col-lg-3 col-12">
                             <div class="left-side-wrapper px-4 py-4 d-lg-block d-none">
                                 <div class="row">
@@ -656,7 +658,28 @@
                                 </button>
                             <!-- Mobile Filter Ends -->
                         </div>
-                        <div class="col-xl-9 col-lg-9 col-12">
+                        <div class="col-xl-9 col-lg-9 col-12 text-center">
+                            <ul class="show-filter d-flex justify-content-between align-items-center">
+                                <li class="p-3">
+                                    Showing all products
+                                </li>
+                                <li class="p-3 d-flex align-items-center">
+                                    <select class="form-control mx-2">
+                                        <option selected="">Choose a Filter</option>
+                                        <option>Alphabetically</option>
+                                        <option>Price High to Low</option>
+                                        <option>Recently Added</option>
+                                        <option>MOstly Purchased</option>
+                                    </select>
+                                    <!-- <select class="form-control filter mx-2">
+                                                                                                                                                                                        <option selected="">Filter</option>
+                                                                                                                                                                                        <option>Alphabetically</option>
+                                                                                                                                                                                        <option>Price High to Low</option>
+                                                                                                                                                                                        <option>Recently Added</option>
+                                                                                                                                                                                        <option>MOstly Purchased</option>
+                                                                                                                                                                                    </select> -->
+                                </li>
+                            </ul>
                             <div class="row right-side-wrapper">
                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4 post">
                                     <div class="product-grid-item2">
@@ -676,7 +699,7 @@
                                                 </li>
                                             </ul> <span class="product-discount-label">-20%</span> </div>
                                         <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
+                                            <h3 class="title text-center"> <a href="product-detail.html" class="font-weight-bold">Authentic Grana Padano </a></h3>
                                             <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
                                     </div>
                                 </div>
@@ -698,7 +721,7 @@
                                                 </li>
                                             </ul> <span class="product-discount-label">-20%</span> </div>
                                         <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
+                                            <h3 class="title text-center"> <a href="product-detail.html" class="font-weight-bold">Authentic Grana Padano </a></h3>
                                             <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
                                     </div>
                                 </div>
@@ -720,7 +743,7 @@
                                                 </li>
                                             </ul> <span class="product-discount-label">-20%</span> </div>
                                         <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
+                                            <h3 class="title text-center"> <a href="product-detail.html" class="font-weight-bold">Authentic Grana Padano </a></h3>
                                             <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
                                     </div>
                                 </div>
@@ -742,7 +765,7 @@
                                                 </li>
                                             </ul> <span class="product-discount-label">-20%</span> </div>
                                         <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
+                                            <h3 class="title text-center"> <a href="product-detail.html" class="font-weight-bold">Authentic Grana Padano </a></h3>
                                             <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
                                     </div>
                                 </div>
@@ -764,7 +787,7 @@
                                                 </li>
                                             </ul> <span class="product-discount-label">-20%</span> </div>
                                         <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
+                                            <h3 class="title text-center"> <a href="product-detail.html" class="font-weight-bold">Authentic Grana Padano </a></h3>
                                             <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
                                     </div>
                                 </div>
@@ -786,7 +809,7 @@
                                                 </li>
                                             </ul> <span class="product-discount-label">-20%</span> </div>
                                         <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
+                                            <h3 class="title text-center"> <a href="product-detail.html" class="font-weight-bold">Authentic Grana Padano </a></h3>
                                             <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
                                     </div>
                                 </div>
@@ -808,7 +831,7 @@
                                                 </li>
                                             </ul> <span class="product-discount-label">-20%</span> </div>
                                         <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
+                                            <h3 class="title text-center"> <a href="product-detail.html" class="font-weight-bold">Authentic Grana Padano </a></h3>
                                             <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
                                     </div>
                                 </div>
@@ -830,7 +853,7 @@
                                                 </li>
                                             </ul> <span class="product-discount-label">-20%</span> </div>
                                         <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
+                                            <h3 class="title text-center"> <a href="product-detail.html" class="font-weight-bold">Authentic Grana Padano </a></h3>
                                             <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
                                     </div>
                                 </div>
@@ -852,12 +875,11 @@
                                                 </li>
                                             </ul> <span class="product-discount-label">-20%</span> </div>
                                         <div class="product-content">
-                                            <h3 class="title text-center"> <a href="#" class="font-weight-bold">Authentic Grana Padano </a></h3>
+                                            <h3 class="title text-center"> <a href="product-detail.html" class="font-weight-bold">Authentic Grana Padano </a></h3>
                                             <div class="price text-center mb-3"> £ 8.00 <span>£ 10.00</span> </div> <a class="all-deals effect" href="">View Product <i class="fa fa-angle-right icon"></i>    </a> </div>
                                     </div>
                                 </div>
-                                <button type="button" class="effect mx-auto mt-4">View More</button>
-                            </div>
+                            </div> <button type="button" class="effect mt-4">View More</button>
                         </div>
                     </div>
                 </div>
@@ -883,7 +905,8 @@
                                 </div>
                             </div>
                             <li>
-                                <a href=" mailto:webmaster@example.com"><span class="mr-2"><i class="fa fa-envelope-square" aria-hidden="true"></i></span>cheeseworld@gmail.com</a>
+                                <a href=" mailto:webmaster@example.com"><span class="mr-2"><i class="fa fa-envelope-square"
+                                            aria-hidden="true"></i></span>upacharpharmacy@gmail.com</a>
                                 </h5>
                             </li>
                             <li>
@@ -1331,8 +1354,8 @@
                     <div class="cart-wishlist">
                         <div class="image">
                             <a class="navbar-brand" href="index.html">
-                                <!-- <img src="frontend/assets/images/logo/logo.png" alt="navigation-logo" class="img-fluid"> -->
-                                <h2 class="m-0 font-weight-bold"><span>Cheese</span> World !</h2>
+                                <img src="frontend/assets/images/logo/3.png" alt="navigation-logo" class="img-fluid">
+                                <!-- <h2 class="m-0 font-weight-bold"><span>Upachar</span> Pharmacy !</h2> -->
                             </a>
                         </div>
                     </div>
